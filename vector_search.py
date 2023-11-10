@@ -2,25 +2,23 @@ import numpy as np
 
 # Sample list of vectors (arrays of numbers)
 vectors = [
-    np.array([1, 2, 3]),
-    np.array([4, 5, 6]),
-    np.array([7, 8, 9]),
-    np.array([10, 11, 12]),
+    np.array([1, 5, 10]),
+    np.array([4, 12, 18]),
+    np.array([19, 23, 23]),
+    np.array([34, 40, 55]),
 ]
 
 # Target vector to search for
-target_vector = np.array([11, 2, 4])
+target_vector = np.array([10, 2, 4])
 
-# Initialize a variable to store the index of the found vector (if any)
-found_index = None
+min_distance = 100000000
+total_dist = 0
 
-# Perform a linear search
-for i, vector in enumerate(vectors):
-    if np.array_equal(vector, target_vector):
-        found_index = i
-        break
-
-if found_index is not None:
-    print(f"Target vector found at index {found_index}")
-else:
-    print("Target vector not found in the list of vectors.")
+for arr in vectors;
+    for i in target_vector.size:
+        dist = abs(arr[i] - target_vector[i])
+        total_dist += dist
+    
+    if total_dist < min_distance:
+        min_distance = total_dist
+        
