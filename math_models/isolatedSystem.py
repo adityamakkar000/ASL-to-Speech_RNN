@@ -4,7 +4,7 @@ import os
 import math
 from Text import TextToSpeech
 
-client = pymongo.MongoClient("mongodb+srv://blueishfiend692:EBqcMyVksJPcK2QA@cluster0.so0ju7f.mongodb.net/")
+client = pymongo.MongoClient("database/")
 db = client['cluster0']
 collection = db[('letters_average')]
 
@@ -21,7 +21,7 @@ ser = serial.Serial('COM5', 9600)
 def get_letter_dict():
   cursor = collection.find()
   data = list(cursor)
-  letters = [entry["word"] for entry in data]c b 
+  letters = [entry["word"] for entry in data]
   resistance_values = [entry["hand"] for entry in data]
   letter_dict = dict(zip(letters, resistance_values))
   return letter_dict
