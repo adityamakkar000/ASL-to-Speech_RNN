@@ -10,7 +10,6 @@ import keras
 
 
 class researchModel:
-
   def __init__(self, type, stacks, batch_size, epochs, x, y):
     if(stacks == 1):
       if(type == "SimpleRNN"):
